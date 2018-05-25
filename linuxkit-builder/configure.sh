@@ -71,6 +71,7 @@ if [ ! -f "$DIR/server-config.tar" ]; then
     )
 fi
 
+mkdir -p ~/Library/LaunchAgents/
 launchctl unload ~/Library/LaunchAgents/org.nix-community.linuxkit-builder.plist 2> /dev/null   || true
 chmod 660  ~/Library/LaunchAgents/org.nix-community.linuxkit-builder.plist 2> /dev/null || true
 cp "$PLIST" ~/Library/LaunchAgents/org.nix-community.linuxkit-builder.plist
